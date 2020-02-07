@@ -1,3 +1,9 @@
+/*
+Creates a new datatype called komplex
+2020-01-31
+Gabriel Öberg
+ */
+
 public class komplex {
     private double a;
     private double b;
@@ -16,8 +22,9 @@ public class komplex {
         komplex a = new komplex(3, 2);
         komplex b = new komplex(4, 1);
         komplex c = add(a,b);
-        System.out.println(c);
+        System.out.println("c is " + c);
         komplex d = multiply(a,b);
+        System.out.println("d is " + d);
     }
 
     private static komplex add(komplex a, komplex b) {
@@ -27,7 +34,9 @@ public class komplex {
 
     private static komplex multiply(komplex a, komplex b) {
 
-        return null;
+        komplex d = new komplex(a.a * b.a - a.b * b.b, a.b * b.a + a.a * b.b);
+        return d;
     }
 
 }
+
