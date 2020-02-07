@@ -13,11 +13,12 @@ public class komplex {
         this.b = b;
     }
 
+    //ändrar format när en komplex skrivs ut
     @Override
     public String toString() {
         return a + " + " + b + "i";
     }
-
+    
     public static void main(String[] args) {
         komplex a = new komplex(3, 2);
         komplex b = new komplex(4, 1);
@@ -27,13 +28,14 @@ public class komplex {
         System.out.println("d is " + d);
     }
 
+    //adderar två komplexer
     private static komplex add(komplex a, komplex b) {
         komplex c = new komplex(a.a + b.a, a.b + b.b);
         return c;
     }
 
+    //multiplicerar två komplexer
     private static komplex multiply(komplex a, komplex b) {
-
         komplex d = new komplex(a.a * b.a - a.b * b.b, a.b * b.a + a.a * b.b);
         return d;
     }
